@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
+import './BookingForm.css'; // Import the CSS file
 
 function BookingForm() {
   const [bookingDetails, setBookingDetails] = useState({
     name: '',
     email: '',
-    // Add more fields as required
+    flightNumber: '',
+    departureDate: '',
   });
 
   const handleChange = (e) => {
@@ -14,12 +16,11 @@ function BookingForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Process booking here
-    console.log(bookingDetails);
+    console.log(bookingDetails); // Process booking here, like sending data to an API
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="booking-form">
       <input
         type="text"
         name="name"
@@ -34,7 +35,19 @@ function BookingForm() {
         onChange={handleChange}
         placeholder="Your Email"
       />
-      {/* Add more inputs as needed */}
+      <input
+        type="text"
+        name="flightNumber"
+        value={bookingDetails.flightNumber}
+        onChange={handleChange}
+        placeholder="Flight Number"
+      />
+      <input
+        type="date"
+        name="departureDate"
+        value={bookingDetails.departureDate}
+        onChange={handleChange}
+      />
       <button type="submit">Book Flight</button>
     </form>
   );

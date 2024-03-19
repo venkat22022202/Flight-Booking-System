@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './SearchForm.css';
 
 function SearchForm({ onSearch }) {
   const [searchParams, setSearchParams] = useState({
@@ -6,7 +7,7 @@ function SearchForm({ onSearch }) {
     arrivalCity: '',
     departureDate: '',
     returnDate: '',
-  });
+  })
 
   const handleChange = (e) => {
     const { name, value } = e.target;

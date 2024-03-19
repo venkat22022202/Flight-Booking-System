@@ -1,0 +1,53 @@
+/* Style for the form container */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 10px; /* Adjust the space between form elements */
+    background-color: #f0f8ff; /* Light background color for the form */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    max-width: 400px; /* Set a max-width for the form and center it */
+    margin: auto;
+    backdrop-filter: blur(5px);
+  }
+  
+  input {
+    width: 100%; /* Make inputs fill the form */
+    padding: 10px; /* Padding for inputs */
+    margin: 5px 0; /* Margin for spacing inputs */
+    border-radius: 5px; /* Rounded borders for inputs */
+    border: 1px solid #ccc; /* Subtle border */
+  }
+  
+  button {
+    background-color: #007bff; /* Blue background for the button */
+    color: white; /* White text color */
+    padding: 10px 15px; /* Padding for the button */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded borders for the button */
+    cursor: pointer; /* Cursor changes to pointer to indicate clickable */
+    transition: background-color 0.3s ease; /* Transition for hover effect */
+  }
+  
+  button:hover {
+    background-color: #0056b3; /* Darken button on hover */
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 600px) {
+    form {
+      width: 90%; /* Make the form take more width on smaller screens */
+    }
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Make it full viewport height */
+    background-image: url('/images/background.jpg');
+    background-size: cover;
+    background-position: center;
+}
+  

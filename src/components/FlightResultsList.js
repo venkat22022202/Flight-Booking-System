@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './FlightResultsList.css';
 
 // Dummy flight data
 const flights = [
